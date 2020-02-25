@@ -1,0 +1,22 @@
+import pandas as pd
+file = pd.read_csv("listings.csv")
+print(file)
+
+
+maxValue = file.max()
+print(maxValue)
+
+
+minValue = file.min()
+print(minValue)
+
+
+listing = file.dropna()
+
+print(listing.isna().values.any())
+print(len(listing))
+
+listing = file.fillna(0)
+
+print(listing.isna().values.any())
+print(len(listing))
